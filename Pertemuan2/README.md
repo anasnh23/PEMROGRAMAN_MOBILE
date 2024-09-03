@@ -50,6 +50,4 @@ Jawab :
     Pemrograman Berorientasi Objek (OOP): Mendukung fitur seperti enkapsulasi, pewarisan, dan polimorfisme.
     Operator: Termasuk operator aritmatika, penambahan/pengurangan, persamaan/relasional, dan logika.   
 
- #### 4. Buatlah slide yang berisi penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan Late variabel !   
- Jawab :  
 
