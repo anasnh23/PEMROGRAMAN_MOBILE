@@ -24,7 +24,7 @@ Hasil Running  :
 
 - Penjelasan : akan terjadi error saat program dart dijalankan. karena terdapat penulisan kata kunci if dan else yang salah. seharusnya ditulis dengan hruf kecil semua.
     
-    
+
 - Hasil Modifikasi  :  <img  src = "prakm1.png">
 
 
@@ -107,6 +107,29 @@ Hasil Running  :
 
 Hasil Modifikasi  :  <img  src = "prak3.1m.png">  
 
+
+### TUGAS PRATIKUM
+
+#### 1.  Buatlah sebuah program yang dapat menampilkan bilangan prima dari angka 0 sampai 201 menggunakan Dart. Ketika bilangan prima ditemukan, maka tampilkan nama lengkap dan NIM Anda.  
+
+Kode Program :    
+        void main () {
+        int counter = 0;
+
+        while (counter < 33) {
+        print(counter);
+        counter++;
+        }
+
+        do {
+        print(counter);
+        counter++;
+        } while (counter < 77);
+        
+        }  
+
+Hasil Running  :  
+<img src = "tgsprak.png">   
 
 
 
