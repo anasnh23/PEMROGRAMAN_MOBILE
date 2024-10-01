@@ -10,7 +10,7 @@ void main() {
 
   // if (test == "test2") print("Test2 again");
 
-  bool test = true; // Menggunakan tipe data boolean
+  bool test = true; 
 
   if (test) {
     print("Kebenaran");
