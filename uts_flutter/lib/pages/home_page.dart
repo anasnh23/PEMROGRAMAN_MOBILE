@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'about_page.dart'; // Halaman About
 import 'profile_page.dart'; // Halaman Profile
+import 'login_page.dart'; // Halaman Login (Logout)
 import 'package:google_fonts/google_fonts.dart'; // Menggunakan Google Fonts
 
 /// Halaman Home yang menampilkan pesan selamat datang dan navigasi ke halaman lain.
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Teks Selamat Datang dengan Desain Modern
+                // Teks Selamat Datang
                 Text(
                   'Selamat Datang, $username!',
                   style: GoogleFonts.poppins(
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(height: screenHeight * 0.05),
 
-                // Tombol untuk Melihat Profile
+                // Tombol Lihat Profile
                 SizedBox(
                   width: screenWidth * 0.9,
                   child: ElevatedButton(
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                       ),
                       padding: const EdgeInsets.symmetric(vertical: 14.0),
-                      elevation: 8.0, // Efek Bayangan
+                      elevation: 8.0,
                     ),
                     onPressed: () {
                       Navigator.push(
@@ -89,7 +90,7 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(height: screenHeight * 0.02),
 
-                // Tombol untuk Melihat Tentang Aplikasi
+                // Tombol Tentang Aplikasi
                 SizedBox(
                   width: screenWidth * 0.9,
                   child: ElevatedButton(
@@ -99,7 +100,7 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                       ),
                       padding: const EdgeInsets.symmetric(vertical: 14.0),
-                      elevation: 8.0, // Efek Bayangan
+                      elevation: 8.0,
                     ),
                     onPressed: () {
                       Navigator.push(
@@ -109,6 +110,40 @@ class HomePage extends StatelessWidget {
                     },
                     child: Text(
                       'Tentang Aplikasi',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          fontSize: screenWidth * 0.05,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: screenHeight * 0.02),
+
+                // Tombol Logout
+                SizedBox(
+                  width: screenWidth * 0.9,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      padding: const EdgeInsets.symmetric(vertical: 14.0),
+                      elevation: 8.0,
+                    ),
+                    onPressed: () {
+                      // Navigasi kembali ke halaman login
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                        (Route<dynamic> route) => false,
+                      );
+                    },
+                    child: Text(
+                      'Logout',
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                           fontSize: screenWidth * 0.05,
